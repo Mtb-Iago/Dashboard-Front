@@ -1,15 +1,19 @@
 <template>
-    <div>
-        <p>HOME</p>
-    </div>
+  <div>
+      <DashboardComponent />
+  </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+import DashboardComponent from "../Dashboard/DashboardComponent";
+
+export default {
+   name: 'HomeComponent',
+    
+   components: {
+      DashboardComponent
+  },
+
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>

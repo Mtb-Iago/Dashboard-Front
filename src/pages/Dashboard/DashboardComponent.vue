@@ -8,7 +8,7 @@
                <NavbarComponent />
            </div>
            <div class="pages">
-
+               <slot name="slot-page"></slot> 
            </div>
 
        </div>

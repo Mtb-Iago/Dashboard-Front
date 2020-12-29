@@ -2,7 +2,7 @@
   <div>
       <DashboardComponent>
         <div slot="slot-page" class="content-page">
-          <p>Home</p>
+          <p>Products</p>
         </div>
       </DashboardComponent>
   </div>
@@ -12,7 +12,7 @@
 import DashboardComponent from "../Dashboard/DashboardComponent";
 
 export default {
-   name: 'HomeComponent',
+   name: 'ProductsComponent',
     
    components: {
       DashboardComponent

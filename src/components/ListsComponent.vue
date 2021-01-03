@@ -15,11 +15,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="user in data" :key="user.id">
-            <th scope="row">{{user.id}}</th>
-            <td>{{user.name}}</td>
-            <td>{{user.email}}</td>
-            <td>{{user.phone}}</td>
+          <tr v-for="item in data" :key="item.id">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{ (description == "Clientes") ? item.email : item.value}}</td>
+            <td>{{item.phone}}</td>
           </tr>
           
         </tbody>
@@ -35,7 +35,7 @@ export default {
   props: {
     data: Array,
     description: String,
-    columns: [],
+    columns: {},
   }
 };
 </script>

@@ -13,7 +13,7 @@
                 :type="'Clientes'"
                 :percentage="'7'"
                 :icon="'fa fa-users'"
-                :qtd="'750'"
+                :qtd="clients.length"
               />
             </div>
 
@@ -22,7 +22,7 @@
                 :type="'Produtos'"
                 :percentage="'20'"
                 :icon="'fa fa-box'"
-                :qtd="'150'"
+                :qtd="products.length"
               />
             </div>
 
@@ -31,7 +31,7 @@
                 :type="'Serviços'"
                 :percentage="'10'"
                 :icon="'fa fa-store'"
-                :qtd="'50'"
+                :qtd="50"
               />
             </div>
 
@@ -40,7 +40,7 @@
                 :type="'Relatórios'"
                 :percentage="'90'"
                 :icon="'fa fa-chart-bar'"
-                :qtd="'150'"
+                :qtd="150"
               />
             </div>
           </div>
@@ -49,11 +49,11 @@
         <div class="mt-5">
           <div class="row">
             <div class="col-12 col-md-6">
-              <ListComponents :data="users" :description="'Clientes'" :columns="['Nome', 'E-mail']" />
+              <ListComponents :data="clients" :description="'Clientes'" :columns="['Nome', 'E-mail']" />
             </div>
 
             <div class="col-12 col-md-6">
-            <ListComponents :data="users" :description="'Produtos'" :columns="['Nome', 'Valor']" />
+            <ListComponents :data="products" :description="'Produtos'" :columns="['Nome', 'Valor']" />
             </div>
           </div>
           
@@ -76,7 +76,8 @@ export default {
 
   data() {
     return {
-      users: []
+      clients: [],
+      products: [],
     }
   },
 
@@ -86,9 +87,16 @@ export default {
 
   methods: {
   async getUsers() {
-  try {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+  /*try {
+    let response = await axios.get('https://jsonplaceholder.typicode.com/users');
     this.users = response.data;
+  } catch (error) {
+    console.error(error);
+  }*/
+  try {
+    let response = await axios.get('/');
+    this.clients = response.data.clients;
+    this.products = response.data.products;
   } catch (error) {
     console.error(error);
   }

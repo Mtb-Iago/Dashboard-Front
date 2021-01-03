@@ -14,6 +14,7 @@
             <ul>
                 <li><router-link :to="{name: 'home'}"><i class="fa fa-home"></i> Inicio</router-link></li>
                 <li><router-link :to="{name: 'products'}"><i class="fa fa-store"></i> Produtos</router-link></li>
+                <li><router-link :to="{name: 'clients'}"><i class="fa fa-store"></i> Clientes</router-link></li>
                 <li><router-link :to="{name: 'home'}"><i class="fa fa-box"></i> Vendas</router-link></li>
                 <li><router-link :to="{name: 'home'}"><i class="fa fa-chart-bar"></i> Relatórios</router-link></li>
                 <li><router-link :to="{name: 'home'}"><i class="fa fa-home"></i> Inicio</router-link></li>
